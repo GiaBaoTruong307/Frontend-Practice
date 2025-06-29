@@ -1,0 +1,108 @@
+:root {
+  --background-body: #141414;
+  --background-card: #1f1f1f;
+  --text-primary: #ffffff;
+  --text-accent: #b1d83b;
+  --link-bg: #333333;
+  --link-hover-bg: #b1d83b;
+  --link-hover-text: #141414;
+  --radius: 16px;
+  --transition: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--background-card);
+  border-radius: var(--radius);
+  max-width: 400px;
+  width: 100%;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-name {
+  color: var(--text-primary);
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.card-location {
+  color: var(--text-accent);
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.card-job {
+  color: var(--text-primary);
+  margin: 16px 0 24px;
+  font-size: 0.95rem;
+}
+
+.links {
+  width: 100%;
+}
+
+.links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.links a {
+  display: block;
+  padding: 12px;
+  background-color: var(--link-bg);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.links a:hover {
+  background-color: var(--link-hover-bg);
+  color: var(--link-hover-text);
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .card-name {
+    font-size: 20px;
+  }
+
+  .card-avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
