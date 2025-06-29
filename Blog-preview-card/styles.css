@@ -2,9 +2,10 @@
   --yellow: #f6d050;
   --white: #ffffff;
   --black: #000000;
-  --gray-dark: #333;
-  --gray-light: #666;
+  --gray-dark: #333333;
+  --gray-light: #666666;
   --radius: 16px;
+  --transition: 0.2s ease-in-out;
 }
 
 * {
@@ -20,6 +21,7 @@ body {
   align-items: center;
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
 }
 
 .card {
@@ -38,6 +40,12 @@ body {
   width: 100%;
   border-radius: var(--radius);
   margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .card-badge {
@@ -48,6 +56,7 @@ body {
   display: inline-block;
   margin-bottom: 12px;
   font-size: 14px;
+  width: fit-content;
 }
 
 .card-date {
@@ -62,7 +71,7 @@ body {
   font-weight: 800;
   margin-bottom: 16px;
   color: var(--black);
-  transition: 0.2s ease-in-out;
+  transition: color var(--transition);
   cursor: pointer;
 }
 
@@ -87,6 +96,7 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .card-author {
@@ -94,7 +104,7 @@ body {
   font-size: 14px;
 }
 
-/* Responsive */
+/* Responsive design */
 @media (max-width: 480px) {
   .card {
     padding: 16px;
