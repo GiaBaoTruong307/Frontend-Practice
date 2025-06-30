@@ -1,0 +1,150 @@
+:root {
+  --background-color: #0d1a2d;
+  --card-color: #14273e;
+  --white: #ffffff;
+  --cyan: #2bbbc8;
+  --light-cyan: #7d9ec8;
+  --gray-blue: #465b76;
+  --transition: 0.4s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.image-container {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.main-img {
+  width: 100%;
+  display: block;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 187, 200, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.image-container:hover .main-img {
+  opacity: 0.6;
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: var(--white);
+  margin: 15px 0;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.card-title:hover {
+  color: var(--cyan);
+}
+
+.card-description {
+  color: var(--gray-blue);
+  font-size: 19px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  border-bottom: 1px solid var(--gray-blue);
+  padding-bottom: 25px;
+}
+
+.card-price,
+.card-time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-price p {
+  color: var(--cyan);
+}
+
+.card-time p {
+  color: var(--light-cyan);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: var(--light-cyan);
+}
+
+.image-avatar {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.footer .name {
+  color: var(--white);
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.footer .name:hover {
+  color: var(--cyan);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .card-description {
+    font-size: 16px;
+  }
+}
