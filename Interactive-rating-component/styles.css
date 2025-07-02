@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(216, 12%, 8%);
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  background-color: hsl(213, 19%, 18%);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.icon-container {
+  border-radius: 50%;
+  background-color: #2a3335;
+  display: inline-block;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.card-question {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.card-description {
+  color: hsl(217, 12%, 63%);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.card-rating {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.rating-btn {
+  background-color: hsl(213, 7%, 33%);
+  border: none;
+  color: hsl(217, 12%, 63%);
+  font-weight: bold;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.rating-btn:hover {
+  background-color: hsl(25, 100%, 50%);
+  color: white;
+}
+
+.rating-btn.selected {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}
+
+.btn-submit button {
+  background-color: hsl(25, 100%, 50%);
+  color: white;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit button:hover {
+  background-color: hsl(25, 100%, 60%);
+}
+
+.hidden {
+  display: none;
+}
+
+.thank-you {
+  text-align: center;
+}
+
+.thank-you-image img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.thank-you .selected-text {
+  background-color: hsl(213, 7%, 33%);
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  color: hsl(25, 100%, 60%);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
